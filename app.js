@@ -4,6 +4,7 @@ import express from 'express';
 import storageAutoNaci from './routers/autoresNaci.js';
 import storageCategorias from './routers/categorias.js';
 import storageEditoriales from './routers/editoriales.js';
+import storageEstadoL from './routers/estadoLibro.js';
 
 
 
@@ -14,6 +15,7 @@ appExpress.use(express.json());
 appExpress.use("/autores", storageAutoNaci);
 appExpress.use("/categorias", storageCategorias);
 appExpress.use("/editoriales", storageEditoriales);
+appExpress.use("/estado", storageEstadoL);
 
 
 const config = JSON.parse(process.env.MY_CONFIG);
