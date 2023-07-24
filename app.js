@@ -9,6 +9,7 @@ import storageLibros from './routers/libros.js';
 import storagePrestamos from './routers/prestamos.js';
 import storageReservas from './routers/reservas.js';
 import storageLibroDisponible from './routers/librosDisponibles.js';
+import storageLibroDPrestado from './routers/librosPrestados.js';
 
 dotenv.config();
 const appExpress = express();
@@ -22,7 +23,7 @@ appExpress.use("/libros", storageLibros);
 appExpress.use("/prestamos", storagePrestamos);
 appExpress.use("/reservas", storageReservas);
 appExpress.use("/libros", storageLibroDisponible);
-
+appExpress.use("/libros", storageLibroDPrestado);
 
 const config = JSON.parse(process.env.MY_CONFIG);
 appExpress.listen(config, ()=>{console.log(`http://${config.hostname}:${config.port}`);});
