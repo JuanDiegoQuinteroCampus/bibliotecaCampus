@@ -13,6 +13,7 @@ import storageLibroDPrestado from './routers/librosPrestados.js';
 import storageUsuarios from './routers/usuarios.js';
 import storageLibrosEscritos from './routers/librosEscritos.js';
 import storageLibrosCategoria from './routers/libroCategoria.js';
+import storageLibrosPag from './routers/librosPag.js';
 
 dotenv.config();
 const appExpress = express();
@@ -30,6 +31,7 @@ appExpress.use("/libros", storageLibroDPrestado);
 appExpress.use("/usuarios", storageUsuarios);
 appExpress.use("/libros", storageLibrosEscritos);
 appExpress.use("/libros", storageLibrosCategoria);
+appExpress.use("/libros", storageLibrosPag);
 
 const config = JSON.parse(process.env.MY_CONFIG);
 appExpress.listen(config, ()=>{console.log(`http://${config.hostname}:${config.port}`);});
