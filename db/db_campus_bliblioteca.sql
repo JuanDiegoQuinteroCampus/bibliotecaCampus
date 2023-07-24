@@ -1,5 +1,9 @@
 /* Nombre de la base de datos: db_campus_bliblioteca */
 
+CREATE DATABASE db_campus_bliblioteca;
+
+USE db_campus_bliblioteca;
+
 CREATE TABLE `autor` (
   `id_autor` int(11) NOT NULL,
   `nombre` varchar(255) DEFAULT NULL,
@@ -51,8 +55,8 @@ CREATE TABLE `reserva` (
   `id_usuario` int(11) DEFAULT NULL,
   `id_libro` int(11) DEFAULT NULL,
   `fecha_reserva` date DEFAULT NULL,
-  `fecha_reserva_fin` date DEFAULT NULL
-  `estado` varchar(50) DEFAULT NULL,
+  `fecha_reserva_fin` date DEFAULT NULL,
+  `estado` varchar(50) DEFAULT NULL
 );
 
 CREATE TABLE `usuario` (
