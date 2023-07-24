@@ -7,6 +7,7 @@ import storageEditoriales from './routers/editoriales.js';
 import storageEstadoL from './routers/estadoLibro.js';
 import storageLibros from './routers/libros.js';
 import storagePrestamos from './routers/prestamos.js';
+import storageReservas from './routers/reservas.js';
 
 
 dotenv.config();
@@ -19,6 +20,7 @@ appExpress.use("/editoriales", storageEditoriales);
 appExpress.use("/estado", storageEstadoL);
 appExpress.use("/libros", storageLibros);
 appExpress.use("/prestamos", storagePrestamos);
+appExpress.use("/reservas", storageReservas);
 
 
 const config = JSON.parse(process.env.MY_CONFIG);
